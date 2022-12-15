@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700;900&display=swap');
+*{
+    font-family: "Roboto", sans-serif;
+}
+
+:root{
+    --primary: #ff379c;
+    --secondary: #ff6ab5;
+	--third: #ff9dce;
+	--thirdLight:#ffbbdd;
+    --link: #0055ff;
+    --gray: #e5e5e5;
+    --white: #FFFFFF;
+    --black: #000000;
+}
+
+body{
+	padding: 10px;
+	background-color: var(--thirdLight);
+
+}
+
+form{
+	margin: 15px 0;
+}
+
+.sing_up{
+	display: flex;
+	color: var(--primary);
+	font-weight: bold;
+	justify-content: center;
+	margin-top: -13rem;
+	margin-bottom: 12rem;
+}
+
+form input[type='text']{
+	border:2px solid var(--black);
+	border-radius: 5px;
+	padding: 5px;
+	width: 70%;
+}
+
+form input[type='submit']{
+	background: var(--secondary);
+	border:none;
+	border-radius: 5px;
+	color: var(--white);
+	cursor:pointer;
+	font-weight: bold;
+	padding: 7px 5px;
+	width: 19%;
+	margin-left: 4px;
+}
+
+#historico_mensagens{
+	border: 2px solid var(--black);
+	border-radius: 5px;
+	min-height: 600px;
+	float:left;
+	margin-bottom: 10px;
+	width: 93%;
+	padding: 8px;
+}
+
+#sala_chat{
+	display: none;
+}
+
+#acesso_usuario{
+	height:30px;
+	left:50%;
+	margin-left:-160px;
+	margin-top:-15px;
+	position: fixed;
+	top:50%;
+	width:320px;
+}
+
+#acesso_usuario form{
+	margin:0;
+}
+
+#historico_mensagens{
+	background-color: var(--white);
+}
+
+#texto_mensagem {
+	width: 75.5%;
+}
+
+#enviar {
+	width: 16.5%;
+}

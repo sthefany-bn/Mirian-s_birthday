@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700;900&display=swap');
+*{
+    font-family: "Roboto", sans-serif;
+}
+:root{
+    --primary: #ff379c;
+    --secondary: #ff6ab5;
+	--third: #ff9dce;
+	--thirdLight:#ffbbdd;
+    --link: #0055ff;
+    --gray: #e5e5e5;
+    --white: #FFFFFF;
+    --black: #000000;
+}
+header {
+  height: 4rem;
+}
+
+header nav input#menu-toggle {
+  display: none;
+}
+
+header div{
+  display: flex;
+  justify-content: flex-end;
+}
+header nav {
+  position: fixed;
+  margin-top: 1rem;
+}
+header nav ul {
+  display: none;
+  background-color: var(--third);
+  list-style: none;
+}
+header nav ul li {
+  text-align: left;
+  margin: 1rem;
+}
+header nav ul li a{
+  text-decoration: none;
+  color: var(--black);
+}
+header nav label[for="menu-toggle"] {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+}
+header nav label[for="menu-toggle"] div.menu-hamburger {
+  width: 35px;
+  height: 15px;
+  margin: 15px 2px 5px 5px;
+  cursor: pointer;
+}
+header nav label[for="menu-toggle"] div.menu-hamburger span.hamburger {
+  position: relative;
+  display: block;
+  background-color: var(--black);
+  width: 30px;
+  height: 2px;
+}
+header nav label[for="menu-toggle"] div.menu-hamburger span.hamburger:before,
+header nav label[for="menu-toggle"] div.menu-hamburger span.hamburger:after {
+  position: absolute;
+  display: block;
+  background-color: var(--black);
+  width: 100%;
+  height: 100%;
+  content: "";
+}
+header nav label[for="menu-toggle"] div.menu-hamburger span.hamburger:before {
+  top: -10px;
+}
+header nav label[for="menu-toggle"] div.menu-hamburger span.hamburger:after {
+  bottom: -10px;
+}
+header nav input:checked ~ ul {
+  display: block;
+  animation: fade-in 1s;
+}
+
+header
+  nav
+  input:checked
+  ~ label[for="menu-toggle"]
+  div.menu-hamburger
+  span.hamburger {
+  transform: rotate(45deg);
+  transition: 0.5s;
+}
+header
+  nav
+  input:checked
+  ~ label[for="menu-toggle"]
+  div.menu-hamburger
+  span.hamburger:before,
+header
+  nav
+  input:checked
+  ~ label[for="menu-toggle"]
+  div.menu-hamburger
+  span.hamburger:after {
+  transform: rotate(90deg);
+  transition: 0.5s;
+}
+header
+  nav
+  input:checked
+  ~ label[for="menu-toggle"]
+  div.menu-hamburger
+  span.hamburger:before {
+  top: 0px;
+}
+header
+  nav
+  input:checked
+  ~ label[for="menu-toggle"]
+  div.menu-hamburger
+  span.hamburger:after {
+  bottom: 0px;
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
